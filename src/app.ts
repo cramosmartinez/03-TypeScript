@@ -1,24 +1,4 @@
-const heroes = [
-    {
-      id: 1,
-      name: 'Ironman',
-      owner: 'Marvel'
-    },
-    {
-      id: 2,
-      name: 'Spiderman',
-      owner: 'Marvel'
-    },
-    {
-      id: 3,
-      name: 'Batman',
-      owner: 'DC'
-    },
-  ];
+import { findHeroByID } from "./services/hero.service";
 
-  const findHeroByID = (id: number) => {
-    return heroes.find( (hero) => hero.id === id );
-  }
-
-  const hero = findHeroByID(1);
-    console.log(hero?.name?? "Hero not found");
+const hero = findHeroByID(1);
+console.log(hero?.name ?? "No hero found");
